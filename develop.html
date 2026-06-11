@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Courses - Brainzy</title>
+    <link rel="stylesheet" href="develop.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hidden state controllers for handling layout logic pure CSS -->
+    <!-- Controllers for opening the two courses -->
+    <input type="radio" id="open-course-1" name="modal-state" class="state-trigger">
+    <input type="radio" id="open-course-2" name="modal-state" class="state-trigger">
+    <input type="radio" id="close-modal" name="modal-state" class="state-trigger" checked>
+
+    <!-- Controllers inside the modal to switch between Video, Quiz, and Certificate tabs -->
+    <input type="radio" id="show-quiz" name="tab-state" class="state-trigger">
+    <input type="radio" id="show-cert" name="tab-state" class="state-trigger">
+    <input type="radio" id="reset-tabs" name="tab-state" class="state-trigger" checked>
+
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="logo.jpg" alt="Brainzy Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">home</a>
+                <a href="courses.html" class="active">courses</a>
+                <a href="about.html">about</a>
+                <a href="getcertified.html">get certified</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <input type="text" placeholder="search here">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <button class="btn btn-login">Log out</button>
+            <button class="btn btn-signup">Sign up</button>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Course Section -->
+    <main class="content-container">
+        <h1 class="page-title">Development Courses</h1>
+
+        <div class="courses-grid">
+            
+            <!-- Course Card 1 Linked via Label -->
+            <label for="open-course-1" class="course-card">
+                <div class="thumbnail-wrapper">
+                    <img src="thumbnail.jpg" alt="Web Development Bootcamp">
+                </div>
+                <div class="course-info">
+                    <h3 class="course-title">Complete Full Stack Web Development Bootcamp</h3>
+                    <p class="instructor"> Choundhary , Developer</p>
+                    <div class="rating">
+                        <span class="rating-num">4.0</span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <!--<p class="price">₹ 499</p>-->
+                </div>
+            </label>
+
+            <!-- Course Card 2 Linked via Label -->
+            <label for="open-course-2" class="course-card">
+                <div class="thumbnail-wrapper">
+                    <img src="thumbnail.jpg" alt="Full Stack Course">
+                </div>
+                <div class="course-info">
+                    <h3 class="course-title">Full Stack Web Development Course</h3>
+                    <p class="instructor">Choudhary, Developer</p>
+                    <div class="rating">
+                        <span class="rating-num">4.0</span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                     <!--<p class="price">₹ 450</p>-->
+                </div>
+            </label>
+        </div>
+    </main>
+
+    <!-- Interactive Interactive Video & Assessment Modal Overlay Panel -->
+    <div class="modal-layer">
+        <div class="modal-content">
+            <label for="close-modal" class="close-btn">&times;</label>
+            
+            <!-- Dynamic Heading display based on course selected -->
+            <h2 class="modal-course-title course-title-1">Complete Full Stack Web Development Bootcamp</h2>
+            <h2 class="modal-course-title course-title-2">Full Stack Web Development Course</h2>
+            
+                        <!-- Stage 1: Video Playback Mode -->
+            <div class="video-stage-panel">
+                <div class="video-container video-1">
+                    <video controls width="100%">
+                        <!-- Links to your local video file-->
+                        <source src="courseVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-container video-2">
+                    <video controls width="100%">
+                        <!-- Links to the same local video file (or a second file if you have one) -->
+                        <source src="courseVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="video-hint"><i class="fa-solid fa-circle-info"></i> Finished watching? Click below to load your certification quiz.</p>
+                <div class="action-footer">
+                    <label for="show-quiz" class="btn-primary">Take Assessment Test</label>
+                </div>
+            </div>
+
+
+            <!-- Stage 2: Assessment Mode Container -->
+            <div class="assessment-stage-panel">
+                <h3 class="quiz-title">Certification Assessment</h3>
+                <p class="quiz-instruction">Select the correct answer to unlock the course completion badge:</p>
+                
+                <div class="quiz-box">
+                    <p class="question">Which HTML element provides the semantic main container structure for a page?</p>
+                    
+                    <!-- Form answers processed via nested CSS selection rules -->
+                    <label class="quiz-option">
+                        <input type="radio" name="assessment-quiz" class="wrong-ans">
+                        <span>&lt;div&gt;</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="assessment-quiz" class="correct-ans">
+                        <span>&lt;main&gt;</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="assessment-quiz" class="wrong-ans">
+                        <span>&lt;section&gt;</span>
+                    </label>
+                </div>
+                <!-- Footer interface prompts display dynamically based on radio answers selected -->
+                <div class="quiz-action-area">
+                    <p class="error-msg-hint">Please choose the correct answer option before proceeding.</p>
+                    <label for="show-cert" class="btn-primary cert-unlock-trigger">
+                        <a href="getcertified.html" style="color: inherit; text-decoration: none; display: block; width: 100%; height: 100%;">Claim Certificate</a>
+                    </label>
+                </div>
+
+
+                <!-- Footer interface prompts display dynamically based on radio answers selected --.
+                <div class="quiz-action-area">
+                    <p class="error-msg-hint">Please choose the correct answer option before proceeding.</p>
+                    <a href="getcertified.html"><label for="show-cert" class="btn-primary cert-unlock-trigger">Claim Certificate</label></a>
+                </div>
+            </div>-->
+
+            <!-- Stage 3: Certificate Mode Preview Container -
+            <div class="certificate-stage-panel">
+                <div class="certificate-badge">🎓</div>
+                <h3>Congratulations!</h3>
+                <p>You have successfully passed the assessment and earned your course completion credential.</p>
+                
+                <div class="cert-card-preview">
+                    <h4>BRAINZY VERIFIED CERTIFICATE</h4>
+                    <p class="cert-student">Verified Student</p>
+                    <p class="cert-text">For successful completion of advanced curriculum modules.</p>
+                </div>
+                
+                <div class="action-footer">
+                    <label for="close-modal" class="btn-secondary">Close Window</label>
+                </div>
+            </div>-->
+
+        </div>
+    </div>
+
+</body>
+</html>

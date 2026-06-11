@@ -1,0 +1,203 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nav Links 
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    
+}*/
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f1e9f7;
+    padding: 8px 15px;
+    border-radius: 4px;
+    width: 260px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 0 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-icon, .search-icon {
+    color: #7c7c7c;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Utility Elements */
+.cart-icon, .user-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #2e2e2e;
+    color: white;
+}
+/* Master Layout Container */
+.page-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 80vh;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Left Illustration Panel */
+.art-section {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-art {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Right Form Panel */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 60px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Heading Styling */
+.form-wrapper h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* Input Row Layout */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Input Fields matching the visual style */
+.input-group input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 15px;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* Highlight input block when selected */
+.input-group input:focus {
+    border-color: #a0a0a0;
+}
+
+/* Submit Action Layout */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.btn-signin {
+    background-color: #262626;
+    color: #ffffff;
+    border: none;
+    width: 130px;
+    height: 42px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-signin:hover {
+    background-color: #000000;
+}
+
+/* Responsive breakdowns for compact viewport sizing */
+@media (max-width: 900px) {
+    .page-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .form-section {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .form-wrapper {
+        text-align: center;
+    }
+    
+    .form-wrapper h2 {
+        font-size: 28px;
+    }
+    
+    .input-group label {
+        text-align: left;
+    }
+}

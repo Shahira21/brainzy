@@ -1,0 +1,352 @@
+/* Base Layout Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #faf9fc;
+    color: #111111;
+}
+
+/* Navbar Interface Layout Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #ffffff;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #8a2375;
+    padding-bottom: 4px;
+}
+
+/* Search Bar metrics configuration */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ede7f6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 280px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 0 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #444;
+}
+
+.menu-icon, .search-icon {
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cart-icon, .user-icon {
+    font-size: 20px;
+    color: #111;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login {
+    background-color: #141414;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #242424;
+    color: white;
+}
+
+/* Master About Page Layout Grid */
+.about-container {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Biography Visual Panel section grid */
+.bio-section {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.bio-image {
+    flex: 1;
+    max-width: 320px;
+}
+
+.bio-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ede7f6;
+}
+
+.bio-content {
+    flex: 2;
+}
+
+.badge {
+    background-color: #f1e9f7;
+    color: #8a2375;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.bio-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.bio-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Social link media anchors */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #555;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+    background-color: #8a2375;
+    color: #ffffff;
+}
+
+/* Split Column Contact Layout Section */
+.contact-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+}
+
+/* Left Contact Info Cards configuration metrics */
+.contact-info-card, .contact-form-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.contact-info-card h2, .contact-form-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.contact-info-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon {
+    width: 46px;
+    height: 46px;
+    background-color: #ede7f6;
+    color: #8a2375;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.info-text h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.info-text p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Right Side Student Input Fields Wrapper Forms */
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row-twin {
+    display: flex;
+    gap: 20px;
+}
+
+.input-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.input-field-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-field-group input, .input-field-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fcfcfd;
+    transition: border-color 0.2s;
+}
+
+.input-field-group input:focus, .input-field-group textarea:focus {
+    border-color: #8a2375;
+    background-color: #ffffff;
+}
+
+.input-field-group textarea {
+    resize: vertical;
+}
+
+/* Form Submission Action Buttons metrics configuration */
+.btn-submit-form {
+    background-color: #8a2375;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-submit-form:hover {
+    background-color: #701c5f;
+}
+
+/* Responsive Adaptive CSS Layout Scaling */
+@media (max-width: 992px) {
+    .bio-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .bio-image {
+        max-width: 220px;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .contact-split-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-row-twin {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

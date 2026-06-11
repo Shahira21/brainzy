@@ -1,0 +1,413 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f6f5f8;
+    color: #111111;
+}
+
+/* Navbar Interface Layout Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #ffffff;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #8a2375;
+    padding-bottom: 4px;
+}
+
+/* Search Container Elements */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ede7f6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 280px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 0 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #444;
+}
+
+.menu-icon, .search-icon {
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cart-icon, .user-icon {
+    font-size: 20px;
+    color: #111;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login {
+    background-color: #141414;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #242424;
+    color: white;
+}
+
+/* Master Layout Framework */
+.cert-page-container {
+    padding: 60px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* --- High-Quality Premium Certificate Display Border Section --- */
+.certificate-frame {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 850px;
+    aspect-ratio: 1.414 / 1; /* Retains exact A4 standard landscape metric shapes */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 15px solid #1a1f71; /* Dark Classic Navy Outer Border frame outline */
+    position: relative;
+}
+
+.inner-border {
+    border: 2px dashed #bfa15f; /* Elegant Gold Double Inner Frame Line metrics */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Top Branding Text Header Elements layout
+.cert-header {
+    width: 20px ;
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.cert-logo-mark {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1f71;
+}---*/
+/* --- FIXED CERTIFICATE HEADER FRAME --- */
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55px; /* Restores your intended structural vertical metric height */
+    margin-bottom: 10px;
+}
+
+/* Restricts the certificate logo from overflowing or hiding content */
+.cert-header img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+.cert-serial-num {
+    font-size: 12px;
+    color: #777777;
+    letter-spacing: 1px;
+}
+
+/* Central Typographical Visual Information Weights setup */
+.cert-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #1a1f71;
+    margin-top: 10px;
+}
+
+.cert-subtitle {
+    font-size: 15px;
+    color: #666666;
+    font-style: italic;
+}
+
+.student-display-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 600;
+    color: #bfa15f; /* Gold text rendering treatment */
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 5px;
+    width: 80%;
+    margin: 10px 0;
+}
+
+.cert-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444444;
+    max-width: 620px;
+}
+
+.course-highlight {
+    color: #111111;
+    font-weight: 700;
+}
+
+/* Footer Signature Panels arrangement matrix */
+.cert-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.signature-block {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sig-line-draw {
+    width: 100%;
+    height: 1px;
+    background-color: #aaaaaa;
+    margin-bottom: 8px;
+}
+
+.handwritten-signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #2b3a8f;
+    margin-bottom: 2px;
+}
+
+.signer-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #111;
+}
+
+.signer-title {
+    font-size: 11px;
+    color: #777;
+}
+
+/* --- Golden Security Medallion Ribbon Badge Assets --- */
+.gold-seal-badge {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.gold-circle-body {
+    background: radial-gradient(circle, #ffd700 0%, #d4af37 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px dashed #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    z-index: 5;
+}
+
+.seal-ribbon {
+    position: absolute;
+    width: 16px;
+    height: 45px;
+    background-color: #c92a2a; /* Crimson Ribbon Background accents */
+    top: 35px;
+    z-index: 2;
+}
+
+.ribbon-left {
+    left: 14px;
+    transform: rotate(15deg);
+}
+
+.ribbon-right {
+    right: 14px;
+    transform: rotate(-15deg);
+}
+
+/* Management Dashboard controls panel layout styles */
+.print-dashboard-panel {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 850px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    text-align: center;
+}
+
+.print-dashboard-panel h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.print-dashboard-panel p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.action-row-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-action-print {
+    background-color: #8a2375;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-action-back {
+    background-color: #212529;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* --- MASTER CSS PRINT LAYOUT STYLES MEDIA CONTROLLER ENGINE --- */
+@media print {
+    /* Hide navigation rows, page header sections, and action utility buttons entirely */
+    .navbar, .print-dashboard-panel {
+        display: none !important;
+    }
+    
+    body {
+        background-color: #ffffff;
+    }
+
+    .cert-page-container {
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    /* Force background colors and graphical elements to process completely on printers */
+    .certificate-frame {
+        box-shadow: none !important;
+        border: 15px solid #1a1f71 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    .gold-circle-body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: #d4af37 !important;
+    }
+}
+
+/* Compact Mobile layout breakdowns styling shifts */
+@media(max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .certificate-frame {
+        aspect-ratio: auto;
+    }
+    .inner-border {
+        padding: 20px;
+        gap: 20px;
+    }
+    .cert-main-title { font-size: 28px; }
+    .student-display-name { font-size: 24px; }
+    .cert-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}

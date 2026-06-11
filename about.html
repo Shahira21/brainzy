@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Contact - Brainzy</title>
+    <link rel="stylesheet" href="about.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="logo.jpg" alt="Brainzy Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">home</a>
+                <a href="courses.html">courses</a>
+                <a href="about.html" class="active">about</a>
+                <a href="getcertified.html">get certified</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <input type="text" placeholder="search here">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <button class="btn btn-login">Log out</button>
+            <button class="btn btn-signup">Sign up</button>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main About Section Container -->
+    <main class="about-container">
+        
+        <!-- Top Visual Biography Block -->
+        <section class="bio-section">
+            <div class="bio-image">
+                <!-- Replace with your own profile image file if needed -->
+                <img src="pic.jpg" alt="Instructor Profile Picture">
+            </div>
+            <div class="bio-content">
+                <span class="badge">Lead Instructor</span>
+                <h1>Hi, I'm Your Mentor</h1>
+                <p>Welcome to Brainzy! I am a professional software developer and tech educator dedicated to helping students bridge the gap between theory and practical industry skills.</p>
+                <p>Through step-by-step video modules, interactive programming code examples, and structured assessment metrics, my goal is to guide you toward successful certification and career advancement.</p>
+                
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Split: Contact Channel Grid -->
+        <section class="contact-split-grid">
+            
+            <!-- Left Column: Fast Contact Information Card -->
+            <div class="contact-info-card">
+                <h2>Get In Touch</h2>
+                <p>Have questions regarding assignment structures, certificate verification issues, or custom business packages? Reach out to me directly through any of these communication paths.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h3>Email Me</h3>
+                            <p>support@brainzy.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <h3>Office Location</h3>
+                            <p>Tech Park Hub, Sector 5, India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="info-text">
+                            <h3>Active Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Student Connection Mailer Form -->
+            <div class="contact-form-card">
+                <h2>Send A Message</h2>
+                
+                <!-- Static messaging engine. Form inputs process directly via basic markup handles -->
+                <form action="#" method="POST" class="student-form">
+                    <div class="form-row-twin">
+                        <div class="input-field-group">
+                            <label for="student-name">Full Name</label>
+                            <input type="text" id="student-name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-field-group">
+                            <label for="student-email">Email Address</label>
+                            <input type="email" id="student-email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="input-field-group">
+                        <label for="msg-subject">Subject Topic</label>
+                        <input type="text" id="msg-subject" required placeholder="Certification question, course support...">
+                    </div>
+
+                    <div class="input-field-group">
+                        <label for="msg-body">Your Message</label>
+                        <textarea id="msg-body" rows="5" required placeholder="Write your thoughts or issues here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-form">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

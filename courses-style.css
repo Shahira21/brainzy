@@ -1,0 +1,188 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Logo Sizing */
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Specific Style for bordered link */
+.nav-btn-outline {
+    border: 1px solid #7c7c7c;
+    padding: 6px 16px;
+    border-radius: 6px;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f1e9f7;
+    padding: 8px 15px;
+    border-radius: 4px;
+    width: 260px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 0 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-icon, .search-icon {
+    color: #7c7c7c;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Utility Elements */
+.cart-icon, .user-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-login {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Core Main Container Layout */
+.content-container {
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* 4-Column Responsive CSS Grid Arrangement */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+/* Individual Grid Blocks Layout */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.image-wrapper {
+    width: 100%;
+    aspect-ratio: 1.55 / 1; /* Retains exact proportion matching the original UI mockup */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Category Label Button Styles */
+.category-btn {
+    background-color: #e0e0e0;
+    color: #2c2c2c;
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 140px;
+    transition: background-color 0.2s;
+}
+
+.category-btn:hover {
+    background-color: #d0d0d0;
+}
+
+/* Layout adaptation adjustments for screen scaling */
+@media (max-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}

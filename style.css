@@ -1,0 +1,304 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+}
+
+.nav-left, .nav-right {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Logo Sizing */
+.logo img {
+    height: 65px; /* Adjust based on original dimensions */
+    width: auto;
+    display: block;
+}
+/* Container holding the links */
+.nav-links {
+    display: flex;       /* Aligns links horizontally */
+    gap: 25px;          /* Creates a 25px space between each link */
+    align-items: center;
+}
+
+/* Individual link styling */
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap; /* Prevents text from breaking onto a new line */
+}
+
+/* Nav Links 
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    
+}*/
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f1e9f7;
+    padding: 8px 15px;
+    border-radius: 4px;
+    width: 260px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 0 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-icon, .search-icon {
+    color: #7c7c7c;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Utility Elements */
+.cart-icon, .user-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Hero Section Layout */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* CTA Button */
+.btn-cta {
+    background-color: #8a2375;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: #701c5f;
+}
+
+/* Hero Image Section */
+.hero-image {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image {
+        justify-content: center;
+    }
+}
+/* --- MODERN MOBILE MEDIA CONTROLLER ENGINE --- */
+
+/* Fixes a styling bug in your current desktop code where signup matches login color */
+.btn-signup {
+    background-color: #2e2e2e !important;
+}
+
+@media (max-width: 768px) {
+    /* Navbar Structural Reset */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 4%;
+        gap: 12px;
+        align-items: stretch; /* Forces elements to scale nicely to the edge */
+    }
+
+    .nav-left {
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+    }
+
+    /* Centers the primary logo branding anchor */
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Hides main link rows on small devices to prevent text overflow columns */
+    .nav-links.main-menu {
+        display: none; 
+    }
+
+    .nav-right {
+        flex-direction: column-reverse; /* Places the search field access point below icons */
+        width: 100%;
+        gap: 15px;
+    }
+
+    /* Elastic Full-Width Search Element */
+    .search-container {
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Horizontal alignment layer for user buttons and carts */
+    .mobile-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* Compact Authentication Control Layout */
+    .nav-links.auth-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* Hero Grid Layout Mechanics */
+    .hero-container {
+        flex-direction: column-reverse; /* Elevates message context above imagery asset */
+        padding: 40px 6%;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Prevents oversized typography from bleeding past the mobile viewport scale */
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    /* Touch-friendly full-width Call To Action asset */
+    .btn-cta {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        border-radius: 8px; /* Adds a clean aesthetic curve edge on mobile */
+    }
+}
+
